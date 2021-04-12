@@ -1,0 +1,158 @@
+/*** Desktop Styles ***/
+html {
+  font: 16px 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+body {
+  align-items: center;
+  background-color: #eee;
+  color: #2b2b2b;
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 1em;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.page {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  font-family: 'Montserrat', serif;
+  justify-content: center;
+  margin: 25px auto;
+  text-shadow: 1px 1px rgba(40,35,35,0.25);
+  width: 95%;
+}
+
+header h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.map-container {
+  display: block;
+}
+
+#countryResults {
+  min-width: 85%;
+}
+
+#stateResults {
+  min-width: 42.5%;
+}
+
+#countryResults, #stateResults {
+  background-color: #f2f2f2;
+  border-collapse: collapse;
+  border-spacing: 0;
+  -webkit-box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(40,35,35,0.25);
+  -moz-box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(40,35,35,0.25);
+  box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(40,35,35,0.25);
+  margin: 10px auto;
+}
+
+#countryResults td, #stateResults td, #countryResults th, #stateResults th {
+  font-size: .8em;
+  text-align: center;
+}
+
+#stateResults th {
+  background-color: #2b2b2b;
+  color: white;
+  padding: .25em;
+}
+
+#countryResults th {
+  background-color: #002b60;
+  color: white;
+  padding: .25em;
+}
+
+.name-1 {
+  background-color: #006000;
+  color: white;
+  padding: .25em;
+}
+
+.name-2 {
+  background-color: #3d0060;
+  color: white;
+  padding: .25em;
+}
+
+.winner {
+  background-color: #002b60;
+  color: white;
+  padding: .25em;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 25px auto;
+  min-width: 85%;
+}
+
+footer p {
+  font-family: "Montserrat", sans-serif;
+  font-size: .8em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+footer a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+/*** Mobile & Tablet Styles ***/
+@media screen and (max-width: 960px) {
+  html {
+    font: 14px 'Open Sans', Helvetica, Arial, sans-serif;
+  }
+
+  #countryResults {
+    min-width: 35%;
+  }
+
+  #stateResults {
+    min-width: 25%;
+  }
+  
+  #countryResults tr, #stateResults tr {
+    display: block;
+  }
+  
+  #countryResults td, #stateResults td, #countryResults th, #stateResults th {
+    border-bottom: 1px solid #f2f2f2;
+    display: block;
+  }
+  
+  #countryResults td::before, #stateResults td::before, #countryResults th::before, #stateResults th::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  #countryResults th:last-child, #stateResults .winner:last-child  {
+    border-bottom: 0;
+  }
+
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>U.S. ELECTION MAP</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body onload="onLoad()">
+<div class="page">
+
+    <header>
+        <h1>U.S. ELECTION MAP</h1>
+    </header>
+ 
+    <table id="countryResults">
+        <tbody>
+         <tr>
+            <td class="name-1">NAME1</td>
+            <td class="name-1">RESULTS1</td>
+            <td class="name-2">NAME2</td>
+            <td class="name-2">RESULTS2</td>
+            <th>WINNER</th>
+            <th>NAME</th>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="map-container">
+        <canvas id="map_canvas" width="800" height="500">
+        </canvas>
+    </div>
+
+    <table id="stateResults">
+        <thead>
+            <tr>
+                <th>STATE NAME</th>
+                <th>Abbreviation</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="name-1">NAME1</td>
+            <td class="name-1">RESULTS1</td>
+        </tr>
+        <tr>
+            <td class="name-2">NAME2</td>
+            <td class="name-2">RESULTS2</td>
+        </tr>
+        <tr>
+            <td class="winner">WINNER</td>
+            <td class="winner">WINNER NAME</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>&copy;2021 Leslie Jade Baier | HTML5 Map Created By: <a href="http://dougx.net/map/usmap.html" target="_blank">DougX.net</a></p>
+    </footer>
+
+</div>
+
+<script src="https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2017/11/map.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
